@@ -1,0 +1,78 @@
+/* إعداد الخطوط والألوان */
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #F9F9F9;
+  color: #333;
+}
+
+header {
+  background-color: #009999;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #E0F7F7;
+}
+
+.hero .btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.btn.primary { background-color: #FFD369; color: #333; }
+.btn.secondary { background-color: #009999; color: white; }
+
+.steps {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.step-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.partners {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.partner-logos img {
+  width: 150px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #009999;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
