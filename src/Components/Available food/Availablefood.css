@@ -1,1 +1,381 @@
+.available-food {
+  padding: 20px 0;
+}
 
+/* فلترة البحث */
+.food-filters {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.filter-section h4 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 20px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: #2E7D32;
+  color: #2E7D32;
+}
+
+.filter-btn.active {
+  background: #2E7D32;
+  border-color: #2E7D32;
+  color: white;
+}
+
+.filter-select {
+  padding: 10px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #2E7D32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+/* عد النتائج */
+.results-count {
+  margin-bottom: 25px;
+  padding: 0 10px;
+}
+
+.results-count p {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* شبكة الطعام */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* كرت الطعام */
+.food-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* حالة الوجبة */
+.food-status {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 15px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* صورة الوجبة */
+.food-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.food-card:hover .food-image img {
+  transform: scale(1.05);
+}
+
+.food-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-distance, .food-rating {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.food-rating i {
+  color: #FFD700;
+}
+
+/* تفاصيل الوجبة */
+.food-details {
+  padding: 20px;
+}
+
+.food-details h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  min-height: 60px;
+}
+
+.food-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.info-item i {
+  color: #2E7D32;
+  width: 20px;
+  text-align: center;
+}
+
+/* تاجات */
+.food-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.tag {
+  padding: 4px 12px;
+  background: #f0f7f0;
+  color: #2E7D32;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* الموقع */
+.food-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.food-location i {
+  color: #f57c00;
+}
+
+/* أزرار الحجز */
+.food-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.reserve-btn {
+  flex: 2;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #2E7D32, #4CAF50);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.reserve-btn:hover:not(.disabled) {
+  background: linear-gradient(135deg, #1B5E20, #2E7D32);
+  transform: translateY(-2px);
+}
+
+.reserve-btn.disabled {
+  background: #9E9E9E;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.details-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #2E7D32;
+  color: #2E7D32;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.details-btn:hover {
+  background: #f0f7f0;
+}
+
+/* لا توجد نتائج */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.no-results i {
+  font-size: 4rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.no-results h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: #999;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* زر تحميل المزيد */
+.load-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.load-more .btn {
+  padding: 12px 40px;
+  font-size: 1rem;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 1200px) {
+  .food-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .filter-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .food-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .food-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .food-filters {
+    padding: 20px;
+  }
+  
+  .food-details h3 {
+    min-height: auto;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .food-actions {
+    flex-direction: column;
+  }
+  
+  .filter-buttons {
+    justify-content: center;
+  }
+  
+  .food-image {
+    height: 180px;
+  }
+}
